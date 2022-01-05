@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useReducer, useContext } from "react";
 
 ////////////////////////
 // INITIAL STATE
@@ -25,7 +25,7 @@ const reducer = (state, action) => {
 ////////////////////////
 // AppContext
 ////////////////////////
-const AppContext = React.createContext(null);
+const AppContext = createContext(null);
 
 ////////////////////////
 // AppState Component
@@ -45,5 +45,5 @@ export const AppState = (props) => {
 ////////////////////////
 
 export const useAppState = () => {
-  return React.useContext(AppContext);
+  return useContext(AppContext);
 };
