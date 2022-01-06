@@ -12,8 +12,8 @@ const App = (props) => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/auth/:form" element={<Auth />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="auth/:form" element={<Auth />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );
