@@ -17,6 +17,10 @@ const reducer = (state, action) => {
     case "auth":
       newState = { ...state, ...action.payload };
       return newState;
+    case "logout":
+      newState = { ...state, token: null, username: null };
+      window.localStorage.removeItem("auth");
+      return newState;
     default:
       return state;
   }
